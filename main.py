@@ -15,7 +15,9 @@ st.write(df.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_na
 
 st.write('Filtro de **Resultados**:')
 
-bu = st.textbox('Buscar:')
-# bu = st.textbox('Buscar:',list(datos_act['Alumno'].unique()))
+bu = st.text_input('Buscar Nadador: (Los apellidos van en mayúsculas)')
 
-st.write(df[df.Nombre.str.contains(bu)])
+st.write(bu)
+# bu = st.selectbox('Buscar:',list(datos_act['Alumno'].unique()))
+
+st.write(df) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
