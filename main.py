@@ -17,7 +17,7 @@ st.write('Filtro de **Resultados**:')
 
 bu = st.text_input('Buscar Nadador: (Los apellidos van en mayúsculas)')
 
-st.write(bu)
+# st.write(bu)
 # bu = st.selectbox('Buscar:',list(datos_act['Alumno'].unique()))
 
-st.write(df) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
+st.write(df[:-2]) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
