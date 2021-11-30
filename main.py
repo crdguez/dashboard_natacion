@@ -32,8 +32,13 @@ st.write(df[df.Club==club])
 ln=list(df.Nombre.sort_values().unique())
 ln.insert(0,'Todos')
 
+lc=list(df.Nombre.sort_values().unique())
+lc.insert(0,'Todos')
+
+cl =st.sidebar.selectbox('Club',lc,0)
 nad = st.sidebar.selectbox('Nadador',ln,0)
 
-slice = df if nad == 'Todos' else df[df.Nombre==nad]
+slice = df if nad == 'Todos' else df[df.club==cl]
+slice = slice if nad == 'Todos' else slice[slice.Nombre==nad]
 
 st.write(slice)
