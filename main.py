@@ -13,7 +13,7 @@ df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba
 
 st.write(df.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
-st.write('Pruebas:')
+st.write('**Resultados:**')
 
 club = st.selectbox('Club', list(df.Club.unique()))
 
