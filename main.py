@@ -36,7 +36,7 @@ lc.insert(0,'Todos')
 
 cl =st.sidebar.selectbox('Club',lc,0)
 
-slice = df if nad == 'Todos' else df[df.club==cl]
+slice = df if cl == 'Todos' else df[df.club==cl]
 
 
 ln=list(slice.Nombre.sort_values().unique())
