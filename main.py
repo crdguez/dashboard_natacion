@@ -15,9 +15,9 @@ st.write(df.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_na
 
 st.write('**Resultados:**')
 
-club = st.selectbox('Club', list(df.Club.unique()))
-
-st.write(df[df.Club==club])
+# club = st.selectbox('Club', list(df.Club.unique()))
+#
+# st.write(df[df.Club==club])
 
 # st.write('Filtro de **Resultados**:')
 #
