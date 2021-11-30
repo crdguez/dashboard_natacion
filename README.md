@@ -19,7 +19,7 @@ sudo docker build -t crdguez/mi_streamlit:v2 .
 He creado un fichero *main.py* con el código de *streamlit*. Si no tengo el docker creado, lo creo con el siguiente comando:
 
 ```
-docker run -it -p 8502:8502 --name natacion -v $PWD:/app crdguez/mi_streamlit main.py
+docker run -it -p 8501:8501 --name natacion -v $PWD:/app crdguez/mi_streamlit:v2 main.py
 
 ```
 

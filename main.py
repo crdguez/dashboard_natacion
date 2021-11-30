@@ -13,11 +13,16 @@ df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba
 
 st.write(df.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
-st.write('Filtro de **Resultados**:')
+st.write('Pruebas:')
 
-bu = st.text_input('Buscar Nadador: (Los apellidos van en mayúsculas)')
+club = st.selectbox('Club', list(df.Club.unique()))
 
-# st.write(bu)
-# bu = st.selectbox('Buscar:',list(datos_act['Alumno'].unique()))
 
-st.write(df[:-2]) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
+# st.write('Filtro de **Resultados**:')
+#
+# bu = st.text_input('Buscar Nadador: (Los apellidos van en mayúsculas)')
+#
+# # st.write(bu)
+# # bu = st.selectbox('Buscar:',list(datos_act['Alumno'].unique()))
+#
+# st.write(df[:-2]) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
