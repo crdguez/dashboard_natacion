@@ -17,7 +17,7 @@ st.write('Pruebas:')
 
 club = st.selectbox('Club', list(df.Club.unique()))
 
-st.write(df.Club==club)
+st.write(df[df.Club==club])
 
 # st.write('Filtro de **Resultados**:')
 #
