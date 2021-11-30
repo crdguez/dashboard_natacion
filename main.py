@@ -32,7 +32,7 @@ st.write(df[df.Club==club])
 ln=list(df.Nombre.sort_values().unique())
 ln.insert(0,'Todos')
 
-lc=list(df.Nombre.sort_values().unique())
+lc=list(df.Club.sort_values().unique())
 lc.insert(0,'Todos')
 
 cl =st.sidebar.selectbox('Club',lc,0)
