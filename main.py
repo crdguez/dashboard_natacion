@@ -17,6 +17,7 @@ st.write('Pruebas:')
 
 club = st.selectbox('Club', list(df.Club.unique()))
 
+st.write(df.Club==club)
 
 # st.write('Filtro de **Resultados**:')
 #
@@ -28,11 +29,11 @@ club = st.selectbox('Club', list(df.Club.unique()))
 # st.write(df[:-2]) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
 
 
-l=list(df.Nombre.sort_values().unique())
-l.insert(0,'Todos')
+ln=list(df.Nombre.sort_values().unique())
+ln.insert(0,'Todos')
 
-val=l[10]
+nad = st.selectbox(ln,0)
 
-slice = df if val == 'Todos' else df[df.Nombre==val]
+slice = df if nad == 'Todos' else df[df.Nombre==val]
 
 st.write(slice)
