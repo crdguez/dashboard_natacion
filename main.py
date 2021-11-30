@@ -36,16 +36,18 @@ lc.insert(0,'Todos')
 
 cl =st.sidebar.selectbox('Club',lc,0)
 
-slice = df if cl == 'Todos' else df[df.club==cl]
+slice =df
+
+# slice = df if cl == 'Todos' else df[df.club==cl]
 
 
-# ln=list(slice.Nombre.sort_values().unique())
-# ln.insert(0,'Todos')
-#
-#
-# nad = st.sidebar.selectbox('Nadador',ln,0)
-#
-#
-# slice = slice if nad == 'Todos' else slice[slice.Nombre==nad]
+ln=list(slice.Nombre.sort_values().unique())
+ln.insert(0,'Todos')
+
+
+nad = st.sidebar.selectbox('Nadador',ln,0)
+
+
+slice = slice if nad == 'Todos' else slice[slice.Nombre==nad]
 
 st.write(slice)
