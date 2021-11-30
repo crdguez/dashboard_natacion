@@ -34,6 +34,6 @@ ln.insert(0,'Todos')
 
 nad = st.selectbox('Nadador',ln,0)
 
-slice = df if nad == 'Todos' else df[df.Nombre==val]
+slice = df if nad == 'Todos' else df[df.Nombre==nad]
 
 st.write(slice)
