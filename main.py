@@ -26,3 +26,13 @@ club = st.selectbox('Club', list(df.Club.unique()))
 # # bu = st.selectbox('Buscar:',list(datos_act['Alumno'].unique()))
 #
 # st.write(df[:-2]) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
+
+
+l=list(df.Nombre.sort_values().unique())
+l.insert(0,'Todos')
+
+val=l[10]
+
+slice = df if val == 'Todos' else df[df.Nombre==val]
+
+st.write(slice)
