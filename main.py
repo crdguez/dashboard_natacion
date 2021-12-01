@@ -101,4 +101,6 @@ st.table(slice)
 
 # Mejores Marcas:
 
+st.write(slice.sort_values(['Pts']).head(5))
+
 
