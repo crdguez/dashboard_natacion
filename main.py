@@ -101,6 +101,6 @@ st.table(slice)
 
 # Mejores Marcas:
 
-st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre']].head(5))
+st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
 
 
