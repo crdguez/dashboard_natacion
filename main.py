@@ -9,8 +9,8 @@ st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layou
 df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba.csv')
 df.Puesto = df.Puesto.astype('int')
 
-st.title('Resultados de natación')
-st.write('Filtra los datos que quieras con en el menú de la izquierda')
+st.title(':shark: :swimmer: Resultados de natación :swimmer: :shark:')
+st.write(':arrow_left: Filtra los datos que quieras con en el menú de la izquierda')
 
 
 # # Bloque de prueba para meter un campo de búsqueda
@@ -35,7 +35,7 @@ slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','F
 # st.sidebar.markdown('---')
 st.sidebar.title(':star2: :star2: Filtros :star2: :star2:')
 st.sidebar.markdown('---')
-st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  :swimmer:')
+st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  ')
 st.sidebar.markdown('---')
 
 # Filtro Temporada
@@ -90,7 +90,7 @@ pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
 
-st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  :swimmer:')
+st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
 
 # Contenidos en la página:
