@@ -30,6 +30,15 @@ st.title('Resultados de natación')
 slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
 
 
+# Filtro Temporada
+
+lt=list(slice.Temporada.sort_values(descending=True).unique())
+lt.insert(0,'Todas')
+
+tm = st.sidebar.selectbox('Temporada:',lt,1)
+slice = slice if lt == 'Todas' else slice[slice.Temporada == tm]
+
+
 # Filtro Competición
 
 lx=list(slice.Competicion.sort_values().unique())
