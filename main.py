@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layout="centered", initial_sidebar_state="auto", menu_items=None)
+
 # Importamos datos
 
 df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba.csv')
@@ -30,6 +32,11 @@ st.write('Filtra los datos que quieras con en el menú de la izquierda')
 
 slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
 
+# st.sidebar.markdown('---')
+st.sidebar.title(':star2: :star2: Filtros :star2: :star2:')
+st.sidebar.markdown('---')
+st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  :swimmer:')
+st.sidebar.markdown('---')
 
 # Filtro Temporada
 
@@ -81,6 +88,10 @@ lp=list(slice.Prueba.sort_values().unique())
 lp.insert(0,'Todas')
 pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
+
+
+st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  :swimmer:')
+
 
 # Contenidos en la página:
 
