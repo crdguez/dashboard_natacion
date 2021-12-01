@@ -8,6 +8,7 @@ df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba
 df.Puesto = df.Puesto.astype('int')
 
 st.title('Resultados de natación')
+st.write('Filtra los datos que quieras con en el menú de la izquierda')
 
 
 # # Bloque de prueba para meter un campo de búsqueda
@@ -92,10 +93,12 @@ st.write('Número de **Nadadores**:')
 st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
 st.header('**Resultados:**')
-st.write('Filtra, si quieres, en el menú de la izquierda')
-
 
 
 # Escribimos los datos filtrados
 
 st.table(slice)
+
+# Mejores Marcas:
+
+
