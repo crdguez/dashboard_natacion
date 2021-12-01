@@ -35,7 +35,6 @@ slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','F
 
 lt=list(slice.Temporada.sort_values().unique())
 lt.insert(0,'Todas')
-
 tm = st.sidebar.selectbox('Temporada:',lt,1)
 slice = slice if lt == 'Todas' else slice[slice.Temporada == tm]
 
@@ -44,16 +43,13 @@ slice = slice if lt == 'Todas' else slice[slice.Temporada == tm]
 
 lx=list(slice.Competicion.sort_values().unique())
 lx.insert(0,'Todas')
-
 cp = st.sidebar.selectbox('Competición:',lx,0)
 slice = slice if cp == 'Todas' else slice[slice.Competicion == cp]
-
 
 # filtro Club
 
 lc=list(df.Club.sort_values().unique())
 lc.insert(0,'Todos')
-
 cl =st.sidebar.selectbox('Club',lc,0)
 slice = slice if cl == 'Todos' else slice[slice.Club==cl]
 
@@ -61,7 +57,6 @@ slice = slice if cl == 'Todos' else slice[slice.Club==cl]
 
 ln=list(slice.Nombre.sort_values().unique())
 ln.insert(0,'Todos')
-
 nad = st.sidebar.selectbox('Nadador',ln,0)
 slice = slice if nad == 'Todos' else slice[slice.Nombre==nad]
 
@@ -69,40 +64,47 @@ slice = slice if nad == 'Todos' else slice[slice.Nombre==nad]
 
 la=list(slice.Anyo_nac.sort_values().unique())
 la.insert(0,'Todos')
+an = st.sidebar.selectbox('Año Nacimiento',la,0)
+slice = slice if an == 'Todos' else slice[slice.Anyo_nac==an]
 
+# Filtro Año
+
+lg=list(slice.M_F.sort_values().unique())
+la.insert(0,'Todos')
 an = st.sidebar.selectbox('Año Nacimiento',la,0)
 slice = slice if an == 'Todos' else slice[slice.Anyo_nac==an]
 
 
-# Filtro Prueba
 
+# Filtro Prueba
 lp=list(slice.Prueba.sort_values().unique())
 lp.insert(0,'Todas')
-
 pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
-
-# Escribimos el número de nadadores
+# Contenidos en la página:
 
 st.header('Temporada: '+str(tm))
 st.header('Competición: '+str(cp))
 
-st.write('Número de **Nadadores**:')
+col01, col02= st.columns(2)
 
-st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
+# Escribimos el número de nadadores
+with col01:
+  st.write('Número de **Nadadores**:')
+  st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
+# Mejores Marcas:
+with col02:
+  st.write('**Top Marcas** según **puntuación FINA**')
+  st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
+  
+
+# Resultados
 st.header('**Resultados:**')
 
-
 # Escribimos los datos filtrados
-
 st.table(slice)
 
-# Mejores Marcas:
-
-st.write('**Top Marcas** según **puntuación FINA**')
-
-st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
 
 
