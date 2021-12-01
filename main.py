@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-
+# Importamos datos
 
 df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba.csv')
 df.Puesto = df.Puesto.astype('int')
@@ -10,10 +10,12 @@ df.Puesto = df.Puesto.astype('int')
 st.title('Resultados de natación')
 
 
+# # Bloque de prueba para meter un campo de búsqueda
+#
 # club = st.selectbox('Club', list(df.Club.unique()))
 #
 # st.write(df[df.Club==club])
-
+#
 # st.write('Filtro de **Resultados**:')
 #
 # bu = st.text_input('Buscar Nadador: (Los apellidos van en mayúsculas)')
@@ -27,12 +29,13 @@ st.title('Resultados de natación')
 
 slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina']]
 
+
 # Filtro Competición
 
 lx=list(slice.Competicion.sort_values().unique())
 lx.insert(0,'Todas')
 
-cp = st.sidebar.selectbox('Competición',lx,0)
+cp = st.sidebar.selectbox('Competición:',lx,0)
 slice = slice if cp == 'Todas' else slice[slice.Competicion == cp]
 
 
@@ -75,8 +78,6 @@ slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 st.header('Competición: '+str(cp))
 
 st.write('Número de **Nadadores**:')
-
-# st.write(df)
 
 st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
