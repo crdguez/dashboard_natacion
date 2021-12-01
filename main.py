@@ -93,15 +93,13 @@ st.write('Número de **Nadadores**:')
 st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
 # Mejores Marcas:
-st.write('**Top Marcas** según **puntuación FINA**')
-st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5).assign(hack='').set_index('hack'))
-  
+num=st.slider('Top Marcas',5,20,step=5)
+st.write('**Top {}** según **puntuación FINA**'.format(num))
+st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
+
 
 # Resultados
 st.header('**Resultados:**')
 
 # Escribimos los datos filtrados
 st.dataframe(slice.assign(hack='').set_index('hack'))
-
-
-
