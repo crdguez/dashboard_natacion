@@ -32,7 +32,7 @@ slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','F
 
 # Filtro Temporada
 
-lt=list(slice.Temporada.sort_values(descending=True).unique())
+lt=list(slice.Temporada.sort_values().unique())
 lt.insert(0,'Todas')
 
 tm = st.sidebar.selectbox('Temporada:',lt,1)
