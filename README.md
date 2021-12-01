@@ -1,6 +1,6 @@
-# dashboard_natacion
+# Dashboard de nataciónn
 
-Aplicación hecha en streamlit para visualizar estadísticas de natacion
+Aplicación hecha en streamlit para visualizar estadísticas de natacion: [https://share.streamlit.io/crdguez/dashboard_natacion/main/main.py](https://share.streamlit.io/crdguez/dashboard_natacion/main/main.py)
 
 Los ficheros que lee la aplicación se encuentran en mi repositorio privado [https://gitlab.com/crdguez/resultados_natacion](https://gitlab.com/crdguez/resultados_natacion)
 
