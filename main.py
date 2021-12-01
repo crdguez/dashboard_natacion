@@ -94,14 +94,14 @@ st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo
 
 # Mejores Marcas:
 st.write('**Top Marcas** según **puntuación FINA**')
-st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
+st.write(slice.style.hide_index().sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
   
 
 # Resultados
 st.header('**Resultados:**')
 
 # Escribimos los datos filtrados
-st.table(slice)
+st.table(slice.style.hide_index())
 
 
 
