@@ -84,7 +84,8 @@ slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
 # Escribimos el número de nadadores
 
-st.header('Temporada: '+str(tm)+'. Competición: '+str(cp))
+st.header('Temporada: '+str(tm))
+st.header('Competición: '+str(cp))
 
 st.write('Número de **Nadadores**:')
 
