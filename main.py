@@ -71,7 +71,7 @@ slice = slice if an == 'Todos' else slice[slice.Anyo_nac==an]
 
 lg=list(slice.M_F.sort_values().unique())
 lg.insert(0,'Todos')
-gn = st.sidebar.selectbox('Género:',lg,0)
+gn = st.sidebar.selectbox('Másculino/Femenino:',lg,0)
 slice = slice if gn == 'Todos' else slice[slice.M_F==gn]
 
 
