@@ -67,12 +67,12 @@ la.insert(0,'Todos')
 an = st.sidebar.selectbox('Año Nacimiento',la,0)
 slice = slice if an == 'Todos' else slice[slice.Anyo_nac==an]
 
-# Filtro Año
+# Filtro Genero
 
 lg=list(slice.M_F.sort_values().unique())
-la.insert(0,'Todos')
-an = st.sidebar.selectbox('Año Nacimiento',la,0)
-slice = slice if an == 'Todos' else slice[slice.Anyo_nac==an]
+lg.insert(0,'Todos')
+gn = st.sidebar.selectbox('Género:',lg,0)
+slice = slice if gn == 'Todos' else slice[slice.M_F==gn]
 
 
 
