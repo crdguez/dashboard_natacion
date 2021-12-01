@@ -87,17 +87,14 @@ slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 st.header('Temporada: '+str(tm))
 st.header('Competición: '+str(cp))
 
-col01, col02= st.columns(2)
-
 
 # Escribimos el número de nadadores
-with col01:
-  st.write('Número de **Nadadores**:')
-  st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
+st.write('Número de **Nadadores**:')
+st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
+
 # Mejores Marcas:
-with col02:
-  st.write('**Top Marcas** según **puntuación FINA**')
-  st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
+st.write('**Top Marcas** según **puntuación FINA**')
+st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(5))
   
 
 # Resultados
