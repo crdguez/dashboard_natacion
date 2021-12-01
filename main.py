@@ -101,7 +101,7 @@ st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Ti
 st.header('**Resultados:**')
 
 # Escribimos los datos filtrados
-st.table(slice.style.hide_index())
+st.table(slice.to_string(index=False))
 
 
 
