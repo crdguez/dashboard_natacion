@@ -27,7 +27,7 @@ st.title('Resultados de natación')
 
 
 
-slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina']]
+slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
 
 
 # Filtro Competición
