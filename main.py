@@ -103,6 +103,8 @@ st.header('Competición: '+str(cp))
 st.write('Número de **Nadadores**:')
 st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
+st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+
 # Mejores Marcas:
 num=st.slider('Top Marcas',5,20,step=5)
 st.write('**Top {}** según **puntuación FINA**'.format(num))
