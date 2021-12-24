@@ -6,7 +6,10 @@ st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layou
 
 # Importamos datos
 
-df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba.csv')
+# df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba.csv')
+
+df=pd.read_csv('https://raw.githubusercontent.com/crdguez/dashboard_natacion/main/importar_datos/base_datos.csv')
+
 df.Puesto = df.Puesto.astype('int')
 
 st.title(':shark: :swimmer: Resultados de natación :swimmer: :shark:')
