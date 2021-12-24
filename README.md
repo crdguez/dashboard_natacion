@@ -1,4 +1,4 @@
-# Dashboard de nataciónn
+# Dashboard de natación
 
 Aplicación hecha en streamlit para visualizar estadísticas de natacion: [https://share.streamlit.io/crdguez/dashboard_natacion/main/main.py](https://share.streamlit.io/crdguez/dashboard_natacion/main/main.py)
 
