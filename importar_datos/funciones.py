@@ -7,12 +7,14 @@ def tabla_a_datos(df, fila_datos = 6, fecha = datetime.datetime(2022,1,20),
                   lugar = 'N/A') :
     
     if tipo == 1 :
-        df2=df[df[0]!='Baja enf.'][df[df[0]!='Baja enf.'][0]!=''].iloc[fila_datos:].reset_index()[range(0,df.columns.size)]
+#         df2=df[df[0]!='Baja enf.'][df[df[0]!='Baja enf.'][0]!=''].iloc[fila_datos:].reset_index()[range(0,df.columns.size)]
+        df2=df[df[4]!=''].iloc[fila_datos:].reset_index()[range(0,df.columns.size)]
         df2.columns=['Puesto','Nombre', 'Anyo_nac', 'Club', 'Tiempo','Pts']
 
         
     elif tipo == 2 :
-        df2=df[df[0]!='Baja enf.'][df[df[0]!='Baja enf.'][0]!=''].iloc[fila_datos:]
+#         df2=df[df[0]!='Baja enf.'][df[df[0]!='Baja enf.'][0]!=''].iloc[fila_datos:]
+        df2=df[df[3]!=''].iloc[fila_datos:]
         df2[5]=df2[1].apply(lambda x: x.split('\n')[0])
         df2[6]=df2[1].apply(lambda x: x.split('\n')[1])
         # df2.reset_index()[range(0,df.columns.size)]
