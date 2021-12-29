@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+from funciones import *
 
 st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layout="centered", initial_sidebar_state="auto", menu_items=None)
 
@@ -113,6 +115,15 @@ num=st.slider('Top Marcas',5,20,step=5)
 st.write('**Top {}** según **puntuación FINA**'.format(num))
 st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
 
+# Evoluación de Puestos:
+
+st.write('**Evolución de Puestos**')
+
+num2=st.slider('Top Puestos',5,50,step=5)
+
+for i in slice[['Anyo_nac','M_F']].drop_duplicates().iterrows():
+    anyo, genero = i[1]
+    st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
 
 # Resultados
 st.header('**Resultados:**')
