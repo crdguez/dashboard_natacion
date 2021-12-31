@@ -9,30 +9,12 @@ st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layou
 # Importamos datos
 
 # df=pd.read_csv('https://gitlab.com/crdguez/resultados_natacion/-/raw/main/prueba.csv')
-
 df=pd.read_csv('https://raw.githubusercontent.com/crdguez/dashboard_natacion/main/importar_datos/base_datos.csv')
 
 df.Puesto = df.Puesto.astype('int')
 
 st.title(':shark: :swimmer: Resultados de natación :swimmer: :shark:')
 st.write(':arrow_left: Filtra los datos que quieras con en el menú de la izquierda')
-
-
-# # Bloque de prueba para meter un campo de búsqueda
-#
-# club = st.selectbox('Club', list(df.Club.unique()))
-#
-# st.write(df[df.Club==club])
-#
-# st.write('Filtro de **Resultados**:')
-#
-# bu = st.text_input('Buscar Nadador: (Los apellidos van en mayúsculas)')
-#
-# # st.write(bu)
-# # bu = st.selectbox('Buscar:',list(datos_act['Alumno'].unique()))
-#
-# st.write(df[:-2]) if bu == '' else st.write(df[df.Nombre.str.contains(bu)])
-
 
 
 slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
@@ -44,7 +26,6 @@ st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer
 st.sidebar.markdown('---')
 
 # Filtro Temporada
-
 lt=list(slice.Temporada.sort_values().unique())
 lt.insert(0,'Todas')
 tm = st.sidebar.selectbox('Temporada:',lt,1)
@@ -52,41 +33,34 @@ slice = slice if lt == 'Todas' else slice[slice.Temporada == tm]
 
 
 # Filtro Competición
-
 lx=list(slice.Competicion.sort_values().unique())
 lx.insert(0,'Todas')
 cp = st.sidebar.selectbox('Competición:',lx,0)
 slice = slice if cp == 'Todas' else slice[slice.Competicion == cp]
 
 # filtro Club
-
 lc=list(df.Club.sort_values().unique())
 lc.insert(0,'Todos')
 cl =st.sidebar.selectbox('Club',lc,0)
 slice = slice if cl == 'Todos' else slice[slice.Club==cl]
 
 # Filtro Nombre
-
 ln=list(slice.Nombre.sort_values().unique())
 ln.insert(0,'Todos')
 nad = st.sidebar.selectbox('Nadador',ln,0)
 slice = slice if nad == 'Todos' else slice[slice.Nombre==nad]
 
 # Filtro Año
-
 la=list(slice.Anyo_nac.sort_values().unique())
 la.insert(0,'Todos')
 an = st.sidebar.selectbox('Año Nacimiento',la,0)
 slice = slice if an == 'Todos' else slice[slice.Anyo_nac==an]
 
 # Filtro Genero
-
 lg=list(slice.M_F.sort_values().unique())
 lg.insert(0,'Todos')
 gn = st.sidebar.selectbox('Másculino/Femenino:',lg,0)
 slice = slice if gn == 'Todos' else slice[slice.M_F==gn]
-
-
 
 # Filtro Prueba
 lp=list(slice.Prueba.sort_values().unique())
@@ -97,14 +71,13 @@ slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
 # Contenidos en la página:
 
-
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader('Filtro aplicado: ')
+    st.subheader('Filtro activo: ')
     # filtro = '**Temporada:** '+str(tm)+' - **Competición:** '+str(cp) +' - **Club:** '+str(cl) \
     #         +' - **Nadador:** ' + str(nad) + ' - **Año:** '+str(an) +' - **Categoría:** '+str(gn) \
     #         +' - **Prueba:** '+str(pr)
@@ -163,4 +136,4 @@ if 'Resultados' in opciones :
     st.header('**Resultados:**')
 
     # Escribimos los datos filtrados
-    st.dataframe(slice.assign(hack='').set_index('hack'))
+    st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
