@@ -24,3 +24,14 @@ def evolucion_puestos(df,num,anyo,genero) :
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
     return fg
+
+def resumen_puestos(df) :
+    # df2=df[['Club','Prueba','Puesto']]
+    df2 = df
+    fg, ax = plt.subplots()
+    plt.boxplot([df2[df2.Club==c].Puesto for c in df2.Club.unique()],labels=df2.Club.unique())
+    plt.xticks(rotation=90)
+    ax.set_ylabel('Puesto')
+    ax.set_title('Distribución de puestos por club')
+
+    return fg

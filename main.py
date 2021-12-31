@@ -95,38 +95,72 @@ pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
 
+# Contenidos en la página:
+
+
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
 
-# Contenidos en la página:
+col1, col2 = st.columns(2)
 
-st.header('Temporada: '+str(tm))
-st.header('Competición: '+str(cp))
+with col1:
+    st.subheader('Filtro aplicado: ')
+    # filtro = '**Temporada:** '+str(tm)+' - **Competición:** '+str(cp) +' - **Club:** '+str(cl) \
+    #         +' - **Nadador:** ' + str(nad) + ' - **Año:** '+str(an) +' - **Categoría:** '+str(gn) \
+    #         +' - **Prueba:** '+str(pr)
+
+    dic_filtro = {'Temporada':str(tm),'Competición':str(cp),'Club':str(cl),
+            'Nadador':str(nad), 'Año':str(an), 'Categoría': str(gn), 'Prueba':str(pr)}
+    st.write(dic_filtro)
+
+with col2:
+    st.subheader('Contenidos visibles:')
+    opciones = st.multiselect(
+        'Añade o elimina:',
+        ['Resumen', 'Evolución','Resultados'],
+        ['Resumen', 'Evolución','Resultados'])
+
+    # st.write('You selected:', opciones)
 
 
-# Escribimos el número de nadadores
-st.write('Número de **Nadadores**:')
-st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
-st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+# Resumen
 
-# Mejores Marcas:
-num=st.slider('Top Marcas',5,20,step=5)
-st.write('**Top {}** según **puntuación FINA**'.format(num))
-st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
+if 'Resumen' in opciones :
+
+    st.subheader('Resumen de los resultados : ')
+
+    # Escribimos el número de nadadores
+    st.write('Número de **Nadadores**:')
+    st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
+
+    st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+    st.pyplot(resumen_puestos(slice))
+
+    # Mejores Marcas:
+    num=st.slider('Top Marcas',5,20,step=5)
+    st.write('**Top {}** según **puntuación FINA**'.format(num))
+    st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
 
 # Evoluación de Puestos:
 
-st.write('**Evolución de Puestos**')
+if 'Evolución' in opciones :
 
-num2=st.slider('Top Puestos',5,50,step=5)
+    st.subheader('Evolución: ')
 
-for i in slice[['Anyo_nac','M_F']].drop_duplicates().iterrows():
-    anyo, genero = i[1]
-    st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
+    st.write('**Evolución de Puestos**')
+
+    num2=st.slider('Top Puestos',5,50,step=5)
+
+    for i in slice[['Anyo_nac','M_F']].drop_duplicates().iterrows():
+        anyo, genero = i[1]
+        st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
 
 # Resultados
-st.header('**Resultados:**')
 
-# Escribimos los datos filtrados
-st.dataframe(slice.assign(hack='').set_index('hack'))
+if 'Resultados' in opciones :
+
+    st.header('**Resultados:**')
+
+    # Escribimos los datos filtrados
+    st.dataframe(slice.assign(hack='').set_index('hack'))
