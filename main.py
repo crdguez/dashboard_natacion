@@ -91,7 +91,7 @@ with col2:
     opciones = st.multiselect(
         'Añade o elimina:',
         ['Resumen', 'Evolución','Resultados'],
-        ['Resumen', 'Evolución','Resultados'])
+        ['Resumen', 'Resultados'])
 
     # st.write('You selected:', opciones)
 
