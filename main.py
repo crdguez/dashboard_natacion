@@ -20,10 +20,12 @@ st.write(':arrow_left: Filtra los datos que quieras con en el menú de la izquie
 slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
 
 # st.sidebar.markdown('---')
-st.sidebar.title(':star2: :star2: Filtros :star2: :star2:')
-st.sidebar.markdown('---')
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  ')
-st.sidebar.markdown('---')
+# st.sidebar.markdown('---')
+
+# st.sidebar.markdown('---')
+st.sidebar.header(':star2: :star2: Filtro :star2: :star2:')
+
 
 # Filtro Temporada
 lt=list(slice.Temporada.sort_values().unique())
@@ -68,18 +70,11 @@ lp.insert(0,'Todas')
 pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
-# Creditos
-
-st.sidebar.header('Autor')
-st.sidebar.info('* Aplicación desarrollada por **Carlos Rodríguez** \
-    \n * El [código fuente](https://github.com/crdguez/dashboard_natacion) se publica con **licencia libre**')
+st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
 
 
 # Contenidos en la página:
-
-st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
-
 
 col1, col2 = st.columns(2)
 
@@ -98,7 +93,7 @@ with col2:
     opciones = st.multiselect(
         'Añade o elimina:',
         ['Resumen', 'Evolución','Resultados'],
-        ['Resumen', 'Resultados'])
+        ['Resumen', 'Evolución','Resultados'])
 
     # st.write('You selected:', opciones)
 
@@ -144,3 +139,11 @@ if 'Resultados' in opciones :
 
     # Escribimos los datos filtrados
     st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
+
+
+# Creditos
+# st.sidebar.header('Autor')
+st.header("Créditos")
+st.info('* Aplicación desarrollada por **Carlos Rodríguez** \
+    \n * El [código fuente](https://github.com/crdguez/dashboard_natacion) se publica con **licencia libre** \
+    \n * Cómo se mantienen los [datos](https://crdguez.gitlab.io/post_sastre/dashboard_natacion/)')
