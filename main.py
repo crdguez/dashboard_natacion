@@ -68,6 +68,13 @@ lp.insert(0,'Todas')
 pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
+# Creditos
+
+st.sidebar.header('Autor')
+st.sidebar.info('* Aplicación desarrollada por **Carlos Rodríguez** \
+    \n * El [código fuente](https://github.com/crdguez/dashboard_natacion) se publica con **licencia libre**')
+
+
 
 # Contenidos en la página:
 
