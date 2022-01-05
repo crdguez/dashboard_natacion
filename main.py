@@ -123,11 +123,11 @@ if 'Resumen' in opciones :
     # )
 
     base = alt.Chart(df_numero_nadadores).encode(
-        theta=alt.Theta("value:Q", stack=True), color=alt.Color("Nombre:N", legend=None)
+        theta=alt.Theta("Nombre:Q", stack=True), color=alt.Color("index:N", legend=None)
     )
 
     pie = base.mark_arc(outerRadius=120)
-    text = base.mark_text(radius=140, size=20).encode(text="Nombre:N")
+    text = base.mark_text(radius=140, size=20).encode(text="index:N")
     #
     st.altair_chart(pie + text, use_container_width=True)
 
