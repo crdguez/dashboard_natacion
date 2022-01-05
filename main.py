@@ -88,7 +88,7 @@ text = base.mark_text(radius=140, size=20).encode(text="category:N")
 
 
 
-st.altair_chart(pie + text, use_container_width=True)
+
 
 # Contenidos en la página:
 
@@ -125,7 +125,8 @@ if 'Resumen' in opciones :
     st.write('Número de **Nadadores**:')
     st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
-    st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+    # st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+    st.altair_chart(pie + text, use_container_width=True)
     st.pyplot(resumen_puestos(slice))
 
     # Mejores Marcas:
