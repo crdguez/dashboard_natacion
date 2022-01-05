@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from funciones import *
+# import altair as alt
 
 st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layout="centered", initial_sidebar_state="auto", menu_items=None)
 
@@ -72,7 +73,13 @@ slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
+df = pd.DataFrame(
+     np.random.randn(200, 3),
+     columns=['a', 'b', 'c'])
+c = alt.Chart(df).mark_circle().encode(
+     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 
+st.altair_chart(c, use_container_width=True)
 
 # Contenidos en la página:
 
