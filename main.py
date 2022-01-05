@@ -113,7 +113,7 @@ if 'Resumen' in opciones :
 
     # Diagrama de barras con el número de nadadores
     # st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
-    st.dataframe(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+    st.dataframe(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique().index)
 
     # Diagrama de tarta con el número de Nadadores
     source = pd.DataFrame(
