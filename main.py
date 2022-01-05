@@ -75,13 +75,20 @@ slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
-source = pd.DataFrame({"category": [1, 2, 3, 4, 5, 6], "value": [4, 6, 10, 3, 7, 8]})
-
-c=alt.Chart(source).mark_arc().encode(
-    theta=alt.Theta(field="value", type="quantitative"),
-    color=alt.Color(field="category", type="nominal"),
+source = pd.DataFrame(
+    {"category": ["a", "b", "c", "d", "e", "f"], "value": [4, 6, 10, 3, 7, 8]}
 )
-st.altair_chart(c, use_container_width=True)
+
+base = alt.Chart(source).encode(
+    theta=alt.Theta("value:Q", stack=True), color=alt.Color("category:N", legend=None)
+)
+
+pie = base.mark_arc(outerRadius=120)
+text = base.mark_text(radius=140, size=20).encode(text="category:N")
+
+
+
+st.altair_chart(pie + text, use_container_width=True)
 
 # Contenidos en la página:
 
