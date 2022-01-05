@@ -71,14 +71,16 @@ lp.insert(0,'Todas')
 pr = st.sidebar.selectbox('Prueba',lp,0)
 slice = slice if pr == 'Todas' else slice[slice.Prueba == pr]
 
+# FIN DE BARRA LATERAL
+
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:')
 
-df = pd.DataFrame(
-     np.random.randn(200, 3),
-     columns=['a', 'b', 'c'])
-c = alt.Chart(df).mark_circle().encode(
-     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+source = pd.DataFrame({"category": [1, 2, 3, 4, 5, 6], "value": [4, 6, 10, 3, 7, 8]})
 
+c=alt.Chart(source).mark_arc().encode(
+    theta=alt.Theta(field="value", type="quantitative"),
+    color=alt.Color(field="category", type="nominal"),
+)
 st.altair_chart(c, use_container_width=True)
 
 # Contenidos en la página:
