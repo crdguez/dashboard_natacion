@@ -122,14 +122,14 @@ if 'Resumen' in opciones :
     #     {"category": ["a", "b", "c", "d", "e", "f"], "value": [4, 6, 10, 3, 7, 8]}
     # )
 
-    # base = alt.Chart(df_numero_nadadores).encode(
-    #     theta=alt.Theta("value:Q", stack=True), color=alt.Color("category:N", legend=None)
-    # )
+    base = alt.Chart(df_numero_nadadores).encode(
+        theta=alt.Theta("value:Q", stack=True), color=alt.Color("Nombre:N", legend=None)
+    )
+
+    pie = base.mark_arc(outerRadius=120)
+    text = base.mark_text(radius=140, size=20).encode(text="Nombre:N")
     #
-    # pie = base.mark_arc(outerRadius=120)
-    # text = base.mark_text(radius=140, size=20).encode(text="category:N")
-    #
-    # st.altair_chart(pie + text, use_container_width=True)
+    st.altair_chart(pie + text, use_container_width=True)
 
     # Diagrama de caja y bigotes con el resumen de puestos
     st.pyplot(resumen_puestos(slice))
