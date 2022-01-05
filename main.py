@@ -112,22 +112,24 @@ if 'Resumen' in opciones :
     st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
 
     # Diagrama de barras con el número de nadadores
+    df_numero_nadadores = slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique()
     # st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
-    st.dataframe(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique().index)
+
+    st.dataframe(df_numero_nadadores)
 
     # Diagrama de tarta con el número de Nadadores
-    source = pd.DataFrame(
-        {"category": ["a", "b", "c", "d", "e", "f"], "value": [4, 6, 10, 3, 7, 8]}
-    )
+    # source = pd.DataFrame(
+    #     {"category": ["a", "b", "c", "d", "e", "f"], "value": [4, 6, 10, 3, 7, 8]}
+    # )
 
-    base = alt.Chart(source).encode(
-        theta=alt.Theta("value:Q", stack=True), color=alt.Color("category:N", legend=None)
-    )
-
-    pie = base.mark_arc(outerRadius=120)
-    text = base.mark_text(radius=140, size=20).encode(text="category:N")
-
-    st.altair_chart(pie + text, use_container_width=True)
+    # base = alt.Chart(df_numero_nadadores).encode(
+    #     theta=alt.Theta("value:Q", stack=True), color=alt.Color("category:N", legend=None)
+    # )
+    #
+    # pie = base.mark_arc(outerRadius=120)
+    # text = base.mark_text(radius=140, size=20).encode(text="category:N")
+    #
+    # st.altair_chart(pie + text, use_container_width=True)
 
     # Diagrama de caja y bigotes con el resumen de puestos
     st.pyplot(resumen_puestos(slice))
