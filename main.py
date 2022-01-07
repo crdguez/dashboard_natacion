@@ -109,46 +109,34 @@ if 'Resumen' in opciones :
 
     # Escribimos el número de nadadores
     st.write('Número de **Nadadores**:')
-    st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
+    # st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
+    slice['Categoria']=slice.Anyo_nac.astype('str')+slice.M_F
+    st.write(slice.pivot_table(values = 'Nombre', columns=['Categoria'], index=['Club'], aggfunc=lambda x: len(x.unique())).fillna(0).astype(int))
 
     # Diagrama de barras con el número de nadadores
-    st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
+    # st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
 
 
-    ## Diagrama de tarta con el número de Nadadores
-    #
-    df_numero_nadadores = slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique().to_frame().reset_index().rename(columns={'Nombre':'Numero'})
-    #
-    # st.dataframe(df_numero_nadadores)
-    #
-    # base = alt.Chart(df_numero_nadadores).encode(
-    #     theta=alt.Theta("Numero:Q", stack=True), color=alt.Color("Club:N", legend=None)
-    # )
-    #
-    # pie = base.mark_arc(outerRadius=100)
-    # text = base.mark_text(radius=140, size=12).encode(text="Club:N")
-    #
-    # #
-    # st.altair_chart(pie + text, use_container_width=True)
+    # Diagramas resumen
+    st.pyplot(graficas_resumen(slice))
 
-
-    # Diagrama de caja y bigotes con el resumen de puestos
-    st.pyplot(resumen_puestos(slice))
+    # df1 = slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique().to_frame().reset_index().rename(columns={'Nombre':'Numero'})
+    # st.table(df1)
 
     # Mejores Marcas:
-    num=st.slider('Top Marcas',5,20,step=5)
+    st.write('**Mejores Marcas**')
+    num=st.slider('Elige el número:',5,20,step=5)
     st.write('**Top {}** según **puntuación FINA**'.format(num))
-    st.write(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
+    st.table(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
 
 # Evoluación de Puestos:
 
 if 'Evolución' in opciones :
 
     st.subheader('Evolución: ')
+    num2=st.slider('Elige el puesto:',5,50,step=5)
 
-    st.write('**Evolución de Puestos**')
-
-    num2=st.slider('Top Puestos',5,50,step=5)
+    st.write('**Evolución de los {} mejores puestos:**'.format(num2))
 
     for i in slice[['Anyo_nac','M_F']].drop_duplicates().iterrows():
         anyo, genero = i[1]
