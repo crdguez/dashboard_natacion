@@ -56,7 +56,7 @@ def graficas_resumen(df) :
     for i, c in enumerate(df2.columns):
         ax3.bar(df2.index, df2[c], label=c, bottom =bot)
         bot=bot+df2[c]
-    # ax3.legend(loc='best',bbox_to_anchor=(-0.1, 1))
+    ax3.legend(loc='best',bbox_to_anchor=(-0.1, 1))
     ax3.set_title('Distribución del número de nadadores')
 
 
