@@ -51,7 +51,7 @@ def graficas_resumen(df) :
     # Distribución de nadadores
     ax3=plt.subplot(gs[1,1])
     df2=df.pivot_table(values = 'Nombre', columns=['Categoria'], index=['Club'], aggfunc=lambda x: len(x.unique())).fillna(0).astype(int)
-    # plt.setp(ax3.xaxis.get_majorticklabels(), rotation=90)
+    plt.setp(ax3.xaxis.get_majorticklabels(), rotation=90)
     bot=np.zeros(len(df2.index)).astype(int)
     for i, c in enumerate(df2.columns):
         ax3.bar(df2.index, df2[c], label=c, bottom =bot)
