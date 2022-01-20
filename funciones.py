@@ -5,7 +5,7 @@ import matplotlib.gridspec as gridspec
 
 def evolucion_puestos(df,num,anyo,genero) :
     df['id']=df.Nombre+"-"+df.Club
-    df2=df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Nombre','Club','Prueba','Puesto','id']]
+    df2=df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Nombre','Club','Prueba','Puesto','id','Fecha']]
     df4=pd.concat([df2[df2.Prueba==j].sort_values(by='Puesto',ascending=True).head(num) for j in df2.Prueba.unique()])
 
     na = df4.id.unique()
@@ -17,7 +17,8 @@ def evolucion_puestos(df,num,anyo,genero) :
 
 
     for n in na:
-        df5=df4[df4.id==n]
+        df5=df4[df4.id==n].sort_values(by='Fecha',ascending=True)
+        # df5=df4[df4.id==n]
         plt.plot(df5.Prueba, df5.Puesto, label=n)
         plt.scatter(df5.Prueba, df5.Puesto)
 
