@@ -141,6 +141,10 @@ if 'Evolución' in opciones :
     for i in slice[['Anyo_nac','M_F']].drop_duplicates().iterrows():
         anyo, genero = i[1]
         st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
+        #st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
+        ## st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_min(axis=0))
+        ## st.dataframe(mejores_marcas(slice, anyo, genero))
+
 
 # Resultados
 

@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
 def evolucion_puestos(df,num,anyo,genero) :
+    # gráfica con la evolución de Puestos
+
     df['id']=df.Nombre+"-"+df.Club
     df2=df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Nombre','Club','Prueba','Puesto','id','Fecha']]
     df4=pd.concat([df2[df2.Prueba==j].sort_values(by='Puesto',ascending=True).head(num) for j in df2.Prueba.unique()])
@@ -26,6 +28,11 @@ def evolucion_puestos(df,num,anyo,genero) :
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
     return fg
+
+def mejores_marcas(df,anyo,genero) :
+    # df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Tiempo.min().unstack('Prueba').fillna('')
+    df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Tiempo.min().unstack('Prueba')
+    return df2
 
 def graficas_resumen(df) :
     gs = gridspec.GridSpec(2, 2)
