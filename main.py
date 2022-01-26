@@ -136,14 +136,16 @@ if 'Resumen' in opciones :
 if 'Evolución' in opciones :
 
     st.subheader('Evolución: ')
-    num2=st.slider('Elige el puesto:',5,50,step=5)
+    num2=st.slider('Elige el puesto:',5,50,step=5, value=10)
 
     st.write('**Evolución de los {} mejores puestos:**'.format(num2))
 
     for i in slice[['Anyo_nac','M_F']].drop_duplicates().iterrows():
         anyo, genero = i[1]
+        st.write('Puestos')
         st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
-        #st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
+        st.write('Marcas')
+        st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
         ## st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_min(axis=0))
         ## st.dataframe(mejores_marcas(slice, anyo, genero))
 
