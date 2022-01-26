@@ -20,6 +20,8 @@ st.write(':arrow_left: Filtra los datos que quieras con en el menú de la izquie
 
 slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
 
+
+
 # st.sidebar.markdown('---')
 st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer: :shark:  ')
 # st.sidebar.markdown('---')
@@ -32,7 +34,7 @@ st.sidebar.header(':star2: :star2: Filtro :star2: :star2:')
 lt=list(slice.Temporada.sort_values().unique())
 lt.insert(0,'Todas')
 tm = st.sidebar.selectbox('Temporada:',lt,1)
-slice = slice if lt == 'Todas' else slice[slice.Temporada == tm]
+slice = slice if tm == 'Todas' else slice[slice.Temporada == tm]
 
 
 # Filtro Competición
@@ -153,7 +155,8 @@ if 'Resultados' in opciones :
     st.header('**Resultados:**')
 
     # Escribimos los datos filtrados
-    st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
+    #st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
+    #st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
 
 
 # Creditos
