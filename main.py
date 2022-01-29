@@ -18,7 +18,7 @@ st.title(':shark: :swimmer: Resultados de natación :swimmer: :shark:')
 st.write(':arrow_left: Filtra los datos que quieras con en el menú de la izquierda')
 
 
-slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
+slice = df[['Nombre','Anyo_nac','M_F','Club','Prueba','Tiempo','Time_stamp','Puesto','Pts','Fecha','Competicion','Lugar','Piscina','Temporada']]
 
 
 
@@ -145,8 +145,10 @@ if 'Evolución' in opciones :
         st.write('Puestos')
         st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
         st.write('Marcas')
-        st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
-        ## st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_min(axis=0))
+        # st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
+        st.dataframe(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
+
+        # st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_min(axis=0))
         ## st.dataframe(mejores_marcas(slice, anyo, genero))
 
 

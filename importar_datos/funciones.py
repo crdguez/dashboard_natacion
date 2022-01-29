@@ -57,6 +57,10 @@ def campos_calculados(df) :
     
     # Añadimos una marca temporal
     df['Time_stamp']=df['Tiempo'].apply(lambda tiempo : pd.to_datetime('00:'+tiempo, format="%M:%S.%f") if len(tiempo.split(':')) == 1 else pd.to_datetime(tiempo, format="%M:%S.%f"))
+    # Lo anterior lleva un año, si solo quisieramos el tiempo
+#     df['Time_stamp']= df['Tiempo'].apply(lambda tiempo : '0:'+tiempo if len(tiempo.split(':')) == 1 else tiempo)
+#     df['Time_stamp']=pd.to_datetime(df['Time_stamp'],format='%M:%S.%f').dt.time
+
 
     return df
 

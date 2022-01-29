@@ -31,7 +31,8 @@ def evolucion_puestos(df,num,anyo,genero) :
 
 def mejores_marcas(df,anyo,genero) :
     # df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Tiempo.min().unstack('Prueba').fillna('')
-    df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Tiempo.min().unstack('Prueba')
+    # df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Tiempo.min().unstack('Prueba')
+    df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo','Time_stamp']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Time_stamp.min().unstack('Prueba')
     return df2
 
 def graficas_resumen(df) :
