@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from funciones import *
 import altair as alt
 
-st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title='Resultados Natación', page_icon=':shark:', layout="wide", initial_sidebar_state="expanded", menu_items=None)
 
 # Importamos datos
 
@@ -83,6 +83,18 @@ st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer
 col1, col2 = st.columns(2)
 
 with col1:
+    st.info(':eye: **Recuerda** que la información que ves se corresponde con el filtro de datos aplicado. Si quieres modifícalo en el menú de la izquierda')
+    st.image('portada.jpg', caption='Photo by Brian Matangelo on "https://unsplash.com/photos/rAn25CLlyLE"')
+    # st.subheader('Filtro activo: ')
+    # # filtro = '**Temporada:** '+str(tm)+' - **Competición:** '+str(cp) +' - **Club:** '+str(cl) \
+    # #         +' - **Nadador:** ' + str(nad) + ' - **Año:** '+str(an) +' - **Categoría:** '+str(gn) \
+    # #         +' - **Prueba:** '+str(pr)
+    #
+    # dic_filtro = {'Temporada':str(tm),'Competición':str(cp),'Club':str(cl),
+    #         'Nadador':str(nad), 'Año':str(an), 'Categoría': str(gn), 'Prueba':str(pr)}
+    # st.write(dic_filtro)
+
+with col2:
     st.subheader('Filtro activo: ')
     # filtro = '**Temporada:** '+str(tm)+' - **Competición:** '+str(cp) +' - **Club:** '+str(cl) \
     #         +' - **Nadador:** ' + str(nad) + ' - **Año:** '+str(an) +' - **Categoría:** '+str(gn) \
@@ -92,7 +104,6 @@ with col1:
             'Nadador':str(nad), 'Año':str(an), 'Categoría': str(gn), 'Prueba':str(pr)}
     st.write(dic_filtro)
 
-with col2:
     st.subheader('Contenidos visibles:')
     opciones = st.multiselect(
         'Añade o elimina:',
@@ -110,10 +121,10 @@ if 'Resumen' in opciones :
     st.subheader('Resumen de los resultados : ')
 
     # Escribimos el número de nadadores
-    st.write('Número de **Nadadores**:')
+    # st.write('Número de **Nadadores**:')
     # st.write(slice.pivot_table(values = 'Nombre', columns='M_F', index=['Club','Anyo_nac'], aggfunc=lambda x: len(x.unique())).unstack().fillna(0).astype(int))
     slice['Categoria']=slice.Anyo_nac.astype('str')+slice.M_F
-    st.write(slice.pivot_table(values = 'Nombre', columns=['Categoria'], index=['Club'], aggfunc=lambda x: len(x.unique())).fillna(0).astype(int))
+    # st.write(slice.pivot_table(values = 'Nombre', columns=['Categoria'], index=['Club'], aggfunc=lambda x: len(x.unique())).fillna(0).astype(int))
 
     # Diagrama de barras con el número de nadadores
     # st.bar_chart(slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique())
@@ -131,6 +142,14 @@ if 'Resumen' in opciones :
     st.write('**Top {}** según **puntuación FINA**'.format(num))
     st.table(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
 
+    st.write(':arrow_down: Pincha si quieres ver:')
+    with st.expander("Resumen de los resultados"):
+        st.info("""**Instrucciones:**
+        \n - Puedes ver la tabla a pantalla completa si seleccionas las doble flecha de la esquina superior derecha.
+        \n - Puedes ordenar por prueba pinchando en la prueba correspondiente.""")
+        st.dataframe(mejores_marcas(slice).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
+
+
 # Evoluación de Puestos:
 
 if 'Evolución' in opciones :
@@ -146,10 +165,22 @@ if 'Evolución' in opciones :
         st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
         st.write('Marcas')
         # st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
-        st.dataframe(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
 
-        # st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_min(axis=0))
-        ## st.dataframe(mejores_marcas(slice, anyo, genero))
+        st.table(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').set_table_styles([{'selector': 'td','props': [('border', '1px solid black'),('text-align', 'center')]}, \
+                           {'selector': 'tr','props': [('border', '1px solid black')]}, \
+                           {'selector': 'th','props': [('border', '1px solid red'),('font-size','12px')]}, \
+                           {'selector': 'td','props': [('border', '4px solid black'),('text-align', 'center'),('font-size','14px')]}, \
+                          ] \
+                         ) \
+                         )
+        st.write(':arrow_down: Pincha si quieres ver:')
+        with st.expander('Tabla interactiva con la que poder ordenar por prueba pinchando en la columna correspondiente') :
+            st.dataframe(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
+
+
+
+
+        # st.write(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').to_html())
 
 
 # Resultados
@@ -158,9 +189,11 @@ if 'Resultados' in opciones :
 
     st.header('**Resultados:**')
 
-    # Escribimos los datos filtrados
-    #st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
-    #st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
+    st.write(':arrow_down: Pincha si quieres ver:')
+    with st.expander('Resultados detallados') :
+        # Escribimos los datos filtrados
+        st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
+        #st.dataframe(slice.assign(hack='').set_index('hack'), height=500)
 
 
 # Creditos
