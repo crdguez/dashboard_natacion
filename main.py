@@ -83,7 +83,7 @@ st.sidebar.title(':swimmer: :shark: :swimmer: :shark: :swimmer: :shark: :swimmer
 col1, col2 = st.columns(2)
 
 with col1:
-    st.info(':eye: **Recuerda** que la información que ves se corresponde con el filtro de datos aplicado. Si quieres modifícalo en el menú de la izquierda')
+    st.info(':eye: **Recuerda** que la información que ves se corresponde con el filtro de datos aplicado. Si quieres modifícalo con el menú de la izquierda')
     st.image('portada.jpg', caption='Photo by Brian Matangelo on "https://unsplash.com/photos/rAn25CLlyLE"')
     # st.subheader('Filtro activo: ')
     # # filtro = '**Temporada:** '+str(tm)+' - **Competición:** '+str(cp) +' - **Club:** '+str(cl) \
@@ -118,7 +118,7 @@ with col2:
 
 if 'Resumen' in opciones :
 
-    st.subheader('Resumen de los resultados : ')
+    st.subheader('Resumen: ')
 
     # Escribimos el número de nadadores
     # st.write('Número de **Nadadores**:')
@@ -131,19 +131,24 @@ if 'Resumen' in opciones :
 
 
     # Diagramas resumen
+    st.write('**Gráficas:**')
     st.pyplot(graficas_resumen(slice))
 
-    # df1 = slice[['Nombre','Club']].groupby(['Club']).Nombre.nunique().to_frame().reset_index().rename(columns={'Nombre':'Numero'})
-    # st.table(df1)
+    st.write(':arrow_down: Pincha si quieres ver:')
+    with st.expander("Tabla con el número de nadadores"):
+        st.table(numero_de_nadadores(slice))
 
-    # Mejores Marcas:
-    st.write('**Mejores Marcas**')
+
+
+    # Top Marcas:
+    st.write('**Mejores Marcas según FINA**')
     num=st.slider('Elige el número:',5,20,step=5)
     st.write('**Top {}** según **puntuación FINA**'.format(num))
     st.table(slice.sort_values(['Pts'],ascending=False)[['Pts','Nombre','Prueba','Tiempo','Anyo_nac','M_F','Club']].head(num).assign(hack='').set_index('hack'))
 
+
     st.write(':arrow_down: Pincha si quieres ver:')
-    with st.expander("Resumen de los resultados"):
+    with st.expander("Detalle de las mejores marcas personales"):
         st.info("""**Instrucciones:**
         \n - Puedes ver la tabla a pantalla completa si seleccionas las doble flecha de la esquina superior derecha.
         \n - Puedes ordenar por prueba pinchando en la prueba correspondiente.""")
@@ -163,7 +168,7 @@ if 'Evolución' in opciones :
         anyo, genero = i[1]
         st.write('Puestos')
         st.pyplot(evolucion_puestos(slice, num2, anyo, genero))
-        st.write('Marcas')
+        st.write('Marcas Personales')
         # st.dataframe(mejores_marcas(slice, anyo, genero).style.highlight_null())
 
         st.table(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').set_table_styles([{'selector': 'td','props': [('border', '1px solid black'),('text-align', 'center')]}, \

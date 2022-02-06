@@ -3,6 +3,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
+def numero_de_nadadores(df) :
+    df=df[['Club','M_F','Anyo_nac','Nombre']].groupby(['Club','M_F','Anyo_nac']).agg(lambda x: len(x.unique())).unstack('M_F').unstack().dropna(axis=1,how='all').fillna(0).astype(int).droplevel(0, axis=1)
+    df.loc['Total']=df.sum()
+    df['Total']=df.sum(axis=1)
+
+    return df.style.set_table_styles([{'selector': 'th',
+                                 'props': [('text-align','center'),('border','0.8px solid red'),('font-weight', 'bold')]},
+                                {'selector': 'td',
+                                 'props': [('text-align','center'),('border','1px solid black')]},
+                               ]
+                              ) \
+                            .set_caption("Distribución del número de nadadores") \
+                            .background_gradient(
+                                                    cmap='PuBuGn',
+    #                                                 cmap='YlOrRd',
+                                                    axis=None,
+    #                                                 subset = (df.index[-1:], df.columns[:-1])
+                                                   )\
+
+
 def evolucion_puestos(df,num,anyo,genero) :
     # gráfica con la evolución de Puestos
 
@@ -34,6 +54,7 @@ def mejores_marcas(df,anyo='',genero='') :
     # df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Tiempo.min().unstack('Prueba')
     df2 = df[(df.Anyo_nac==anyo) & (df.M_F==genero)] if (anyo !='') & (genero!='') else df
     df2 = df2[['Anyo_nac','M_F','Club','Nombre','Prueba','Tiempo','Time_stamp']].groupby(['Anyo_nac','M_F','Club','Nombre','Prueba']).Time_stamp.min().unstack('Prueba')
+
     return df2
 
 def graficas_resumen(df) :
