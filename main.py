@@ -204,6 +204,6 @@ if 'Resultados' in opciones :
 # Creditos
 # st.sidebar.header('Autor')
 st.header("Créditos")
-st.info('* Aplicación desarrollada por **Carlos Rodríguez** \
+st.info('* Aplicación desarrollada por **[Carlos Rodríguez](https://github.com/crdguez)** \
     \n * El [código fuente](https://github.com/crdguez/dashboard_natacion) se publica con **licencia libre** \
     \n * Cómo se mantienen los [datos](https://crdguez.gitlab.io/post_sastre/dashboard_natacion/)')
