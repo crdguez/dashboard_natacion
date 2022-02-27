@@ -1,6 +1,15 @@
 import datetime
 import pandas as pd
 
+def separar_columna(df, i, st='\n'):
+    return pd.concat([df[list(range(i))],df[i].str.split(st,expand=True), df[list(range(i+1,len(df.columns)))]], axis =1).T.reset_index(drop=True).T[:]
+
+def juntar_columnas(df,i,j) :
+#     df[df.columns[list(range(i,j+1))]].apply(lambda x: ''.join(x.dropna().astype(str)),axis=1)
+    return pd.concat([df[list(range(i))],df[df.columns[list(range(i,j+1))]].apply(lambda x: ''.join(x.dropna().astype(str)),axis=1),df[list(range(j+1,len(df.columns)))]], axis =1).T.reset_index(drop=True).T[:]
+
+
+
 def tabla_a_datos(df, fila_datos = 6, fecha = datetime.datetime(2022,1,20), 
                   prueba = '50m Espalda', piscina = '25m', m_f='M', tipo = 1, 
                  competicion = 'N/A',

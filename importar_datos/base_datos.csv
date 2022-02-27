@@ -522,3 +522,95 @@ Puesto,Nombre,Anyo_nac,Club,Tiempo,Pts,Fecha,Prueba,Piscina,M_F,Competicion,Luga
 21,"BARCELONA PERALES, Beltran",11,E.M. El Olivar,1:47.42,73,2022-02-20,100m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:47.420
 22,"JIMENEZ VICO, Pedro",11,C.N. Helios,1:56.60,57,2022-02-20,100m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:56.600
 23,"QUINTANILLA CARBAJO, Amaro",11,H2ogo C.N.,2:05.83,45,2022-02-20,100m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:05.830
+1,"MENDEZ SALVADOR, Carlos",10,C.N. Teruel,2:39.66,241,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:39.660
+2,"MARTIN FERNANDEZ, Leo",10,E.M. El Olivar,2:41.56,232,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:41.560
+3,"PETISME ROYO, Lucas",10,E.M. El Olivar,2:43.39,224,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:43.390
+4,"RAMOS OLMOS, Diego",10,P. San Agustin,2:49.32,202,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:49.320
+5,"BARRIENDOS ZAMORA, Saul",10,C.N. Helios,2:50.36,198,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:50.360
+6,"SANCHEZ MERCADO, Adrian",10,Stadium Casablanca,2:52.39,191,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:52.390
+7,"MOSTEO HIDALGO, Carlos",10,E.M. El Olivar,2:59.26,170,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:59.260
+8,"RAMOS OLMOS,Marcos",10,P. San Agustin,2:59.54,169,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:02:59.540
+9,"ESTAUN LOPEZ, Marcos",10,C.N. Helios,3:00.69,166,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:00.690
+10,"BERDEJO LOBERA, Guillermo",10,E.M. El Olivar,3:01.15,165,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:01.150
+11,"GREGORIO FERNANDEZ, Enrique",10,P. San Agustin,3:01.70,163,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:01.700
+12,"JIMENEZ LAFUENTE, Daniel",10,C.N. Helios,3:02.32,161,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:02.320
+13,"RUBIO RAKITIN, Larion Francisco",10,C.N. Helios,3:04.64,155,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:04.640
+14,"SANCHEZ SAEZ, Alejandro",10,P. San Agustin,3:07.97,147,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:07.970
+15,"SANZ BEJENARIU, Diego",10,C.N. Iz Cuarte,3:11.38,139,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:11.380
+16,"VICENTE BARRA, Guillen",10,H2ogo C.N.,3:13.44,135,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:13.440
+17,"RAZABAL INGELMO, Angel",10,E.M. El Olivar,3:13.84,134,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:13.840
+18,"AGON LOPEZ, Javier",10,Stadium Casablanca,3:15.25,131,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:15.250
+19,"NEVADO PEREZ, Lorien",10,C.N. Helios,3:21.09,120,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:21.090
+20,"TELLO GRACIA, Aaron",10,C.N. Helios,3:24.97,113,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:24.970
+21,"SANTAMARIA FERRERUELA, Carlos",10,P. San Agustin,3:27.36,110,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:27.360
+22,"SANCHEZ DUARTE, Rodrigo",10,Stadium Venecia,3:34.13,99,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:34.130
+23,"CUEZVA JORDAN, Hector",10,Stadium Venecia,3:34.20,99,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:34.200
+24,"PEREZ DOMINCHE, Oriol",10,C.N. Helios,3:53.64,76,2022-02-20,200m Libre,25m,M,"Benjamín, jornada 4",E.M. El Olivar,12,2021-2022,1900-01-01 00:03:53.640
+1,"MALON CANTIN, Sofia",13,C.N. Helios,1:31.40,166,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:31.400
+2,"RODRIGUEZ SOLANAS, Ines",13,E.M. El Olivar,1:31.41,166,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:31.410
+3,"GAINSINSKY CASTILLO, Michelle",13,C.N. Helios,1:38.57,132,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:38.570
+4,"RODRIGO LORENTE, Claudia",13,Stadium Venecia,1:40.56,124,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:40.560
+5,"MARTIN SORIA, Claudia",13,Stadium Venecia,1:40.91,123,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:40.910
+6,"MALO SANCHEZ, Paula",13,C.N. Helios,1:43.50,114,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:43.500
+7,"ESCORIHUELA AZNAR, Claudia",13,E.M. El Olivar,1:45.39,108,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:45.390
+8,"MARTINEZ MARQUES, Aimar Teresa",13,Stadium Venecia,1:48.23,100,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:48.230
+9,"LEAL PELEGRIN, Julieta",13,E.M. El Olivar,1:48.82,98,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:48.820
+10,"GIMENO GOMEZ, Yaretzi Izel",13,P. San Agustin,1:49.62,96,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:49.620
+11,"REMACHA ROYO, Itziar",13,E.M. El Olivar,1:53.45,86,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:53.450
+12,"RODRIGO MONFORTE, Lucia",13,E.M. El Olivar,1:54.02,85,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:54.020
+13,"SALUEÑA LUCHA, Vera",13,C.N. Helios,1:57.72,77,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:01:57.720
+14,"BORREGUERO PEDREIRA, Leire",13,E.M. El Olivar,2:01.32,71,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:01.320
+15,"GALAY TORRIJO, Celia",13,Stadium Venecia,2:03.50,67,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:03.500
+16,"MARIN PELEGRIN, Sara",13,H2ogo C.N.,2:09.69,58,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:09.690
+17,"MARIN PELEGRIN, Julia",13,H2ogo C.N.,2:09.74,58,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:09.740
+18,"GARCIA RODRIGUEZ, Aroa",13,C.N. Helios,2:13.15,53,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:13.150
+19,"GARCIA ZABAL, Carmen",13,P. San Agustin,2:21.81,44,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:21.810
+20,"IZQUIERDO GRACIA, Maria",13,Stadium Venecia,2:34.51,34,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:02:34.510
+21,"MATA AGUELA, Candela",13,E.M. El Olivar,3:04.75,20,2022-02-20,100m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,9,2021-2022,1900-01-01 00:03:04.750
+1,"CASTILLO PRADO, Neus",12,E.M. El Olivar,3:02.34,222,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:02.340
+2,"LAMBAN GAVE, Ines",12,P. San Agustin,3:03.86,216,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:03.860
+3,"IOVU, Mireya",12,P. San Agustin,3:12.81,187,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:12.810
+4,"BERGES ALAEZ, Africa",12,E.M. El Olivar,3:17.72,174,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:17.720
+5,"GIL FUENTES, Izarbe",12,Stadium Venecia,3:17.95,173,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:17.950
+6,"SIMON HEREDIA, Ariadna",12,E.M. El Olivar,3:23.89,158,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:23.890
+7,"ALBAR LABRADOR, Pilar",12,E.M. El Olivar,3:23.94,158,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:23.940
+8,"RAZABAL INGELMO, Naiara",12,E.M. El Olivar,3:27.53,150,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:27.530
+9,"GIMENO MONREAL, Manuela",12,E.M. El Olivar,3:29.23,147,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:29.230
+10,"PERALES CASAS, Laura",12,E.M. El Olivar,3:29.32,146,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:29.320
+11,"BARRACHINA ARTAZCOZ, Nahia",12,E.M. El Olivar,3:29.67,146,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:29.670
+12,"ALONSO MORA, Naiara",12,Stadium Venecia,3:33.67,138,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:33.670
+13,"RAZABAL INGELMO, Anahi",12,E.M. El Olivar,3:35.42,134,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:35.420
+14,"SAN MIGUEL PUYUELO, Angela",12,Stadium Casablanca,3:40.06,126,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:40.060
+15,"BERGES ALAEZ, Daniela",12,E.M. El Olivar,3:44.60,118,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:44.600
+16,"ORTEGA FRAGOSO, Emma",12,Stadium Venecia,3:47.80,113,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:47.800
+18,"IRIMIA MICU, Paula Raisa",12,P. San Agustin,3:53.91,105,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:53.910
+19,"RASAL ALVAREZ, Maria",12,P. San Agustin,3:54.99,103,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:54.990
+20,"GALIPIENZO NAVARRO, Cristina",12,Stadium Venecia,3:55.64,102,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:03:55.640
+21,"DEL REAL MUNIENTE, Elena",12,P. San Agustin,4:06.91,89,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:04:06.910
+22,"SANCHEZ AGUADO, Enma",12,Stadium Casablanca,4:08.36,87,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:04:08.360
+23,"CEBRIAN PUEYO, Carolina",12,P. San Agustin,4:09.23,86,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:04:09.230
+24,"GALIPIENZO NAVARRO, Paula",12,Stadium Venecia,4:18.12,78,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:04:18.120
+25,"PES URREA, Pilar",12,P. San Agustin,4:18.31,78,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:04:18.310
+26,"ROMERO LORENTE, Paula",12,P. San Agustin,4:50.13,55,2022-02-20,200m Libre,25m,F,"Benjamín, jornada 4",E.M. El Olivar,10,2021-2022,1900-01-01 00:04:50.130
+1,"MARCO LOPEZ, Leo",11,C.N. Helios,1:38.16,179,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:38.160
+2,"FANDOS MARCO, Carlos",11,E.M. El Olivar,1:43.18,154,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:43.180
+3,"CAVERO GARCIA, Daniel",11,Stadium Casablanca,1:43.34,153,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:43.340
+4,"SERRABLO HUESO, Diego",11,Stadium Venecia,1:44.04,150,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:44.040
+5,"BESCOS RODRIGUEZ, Jesus",11,E.M. El Olivar,1:46.33,140,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:46.330
+6,"MARTINEZ ANTUNEZ, Roman",11,Stadium Venecia,1:46.79,139,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:46.790
+7,"RODRIGUEZ ARTIEDA, Marcelo",11,C.N. Helios,1:48.18,133,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:48.180
+8,"TATARU, Adrian Stefan",11,E.M. El Olivar,1:48.20,133,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:48.200
+9,"MODREGO MARQUETA, Alejandro",11,Stadium Venecia,1:48.23,133,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:48.230
+10,"LOPEZ VELEZ, Marcos",11,E.M. El Olivar,1:48.31,133,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:48.310
+11,"BEAMONTE MARTIN, Diego",11,P. San Agustin,1:52.44,119,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:52.440
+12,"ANTONENKO ANTONENKO, Yehor",11,H2ogo C.N.,1:56.75,106,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:56.750
+13,"SANCHO GRAUS, Bruno",11,E.M. El Olivar,1:56.89,106,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:01:56.890
+14,"ROMERO SANTOS, Kilian",11,C.N. Helios,2:01.41,94,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:01.410
+15,"BELTRAN VIEJO, Arturo",11,E.M. El Olivar,2:02.82,91,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:02.820
+16,"ANGUAS FELIZ, Aquiles",11,E.M. El Olivar,2:03.57,89,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:03.570
+17,"ALCALDE MARTINEZ, Martin",11,C.N. Helios,2:05.69,85,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:05.690
+18,"NAVARRO PARDOS, Francisco",11,H2ogo C.N.,2:06.50,83,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:06.500
+19,"PELEGRIN RUIZ, Raul",11,C.N. Helios,2:06.51,83,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:06.510
+20,"BORROY SANCHEZ, Martin",11,Stadium Casablanca,2:17.94,64,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:17.940
+21,"BARCELONA PERALES, Beltran",11,E.M. El Olivar,2:18.03,64,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:18.030
+22,"QUINTANILLA CARBAJO, Amaro",11,H2ogo C.N.,2:31.26,48,2022-02-20,100m Braza,25m,M,"Benjamín, jornada 4",E.M. El Olivar,11,2021-2022,1900-01-01 00:02:31.260
