@@ -28,7 +28,9 @@ def evolucion_puestos(df,num,anyo,genero) :
 
     df['id']=df.Nombre+"-"+df.Club
     df2=df[(df.Anyo_nac==anyo) & (df.M_F==genero)][['Nombre','Club','Prueba','Puesto','id','Fecha']]
-    df4=pd.concat([df2[df2.Prueba==j].sort_values(by='Puesto',ascending=True).head(num) for j in df2.Prueba.unique()])
+    df2['Fecha_Prueba']=df2['Fecha']+' \n '+df2['Prueba']
+    # df4=pd.concat([df2[df2.Prueba==j].sort_values(by='Puesto',ascending=True).head(num) for j in df2.Prueba.unique()])
+    df4=pd.concat([df2[df2.Fecha_Prueba==j].sort_values(by='Puesto',ascending=True).head(num) for j in df2.Fecha_Prueba.unique()])
 
     na = df4.id.unique()
 
@@ -40,12 +42,14 @@ def evolucion_puestos(df,num,anyo,genero) :
 
     for n in na:
         df5=df4[df4.id==n].sort_values(by='Fecha',ascending=True)
-        # df5=df4[df4.id==n]
-        plt.plot(df5.Prueba, df5.Puesto, label=n)
-        plt.scatter(df5.Prueba, df5.Puesto)
+        # plt.plot(df5.Prueba, df5.Puesto, label=n)
+        # plt.scatter(df5.Prueba, df5.Puesto)
+        plt.plot(df5.Fecha_Prueba, df5.Puesto, label=n)
+        plt.scatter(df5.Fecha_Prueba, df5.Puesto)
 
     plt.grid(True, axis='y')
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+    plt.xticks(rotation=0)
 
     return fg
 
@@ -61,6 +65,7 @@ def graficas_resumen(df) :
     gs = gridspec.GridSpec(2, 2)
     # fg, (ax1,ax2) = plt.subplots(1,2)
     fg=plt.figure()
+
     # Diagrama de caja y bigotes con la distribución de puestos
     ax2=plt.subplot(gs[0,:])
     ax2.boxplot([df[df.Club==c].Puesto for c in df.Club.unique()],labels=df.Club.unique(),vert=False)
