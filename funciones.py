@@ -1,7 +1,14 @@
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+
+
+@st.cache
+def convert_df(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv().encode('utf-8')
 
 def numero_de_nadadores(df) :
     df=df[['Club','M_F','Anyo_nac','Nombre']].groupby(['Club','M_F','Anyo_nac']).agg(lambda x: len(x.unique())).unstack('M_F').unstack().dropna(axis=1,how='all').fillna(0).astype(int).droplevel(0, axis=1)

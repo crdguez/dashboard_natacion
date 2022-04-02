@@ -1,4 +1,5 @@
 import streamlit as st
+# import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -104,6 +105,16 @@ with col2:
             'Nadador':str(nad), 'Año':str(an), 'Categoría': str(gn), 'Prueba':str(pr)}
     st.write(dic_filtro)
 
+    # @st.cache
+    csv = convert_df(slice)
+    st.download_button(
+         label="Descargar datos filtrados en CSV",
+         data=csv,
+         file_name='datos.csv',
+         mime='text/csv',
+     )
+
+
     st.subheader('Contenidos visibles:')
     opciones = st.multiselect(
         'Añade o elimina:',
@@ -111,6 +122,7 @@ with col2:
         ['Resumen', 'Evolución','Resultados'])
 
     # st.write('You selected:', opciones)
+    # st.write(':new:')
 
 
 
@@ -148,11 +160,16 @@ if 'Resumen' in opciones :
 
 
     st.write(':arrow_down: Pincha si quieres ver:')
-    with st.expander("Detalle de las mejores marcas personales"):
+    with st.expander("Mejores marcas personales"):
         st.info("""**Instrucciones:**
         \n - Puedes ver la tabla a pantalla completa si seleccionas las doble flecha de la esquina superior derecha.
         \n - Puedes ordenar por prueba pinchando en la prueba correspondiente.""")
-        st.dataframe(mejores_marcas(slice).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
+        clubes = st.multiselect(
+             'Clubes:',
+             slice.Club.unique(),
+             slice.Club.unique()
+             )
+        st.dataframe(mejores_marcas(slice[slice.Club.isin(clubes)]).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
 
 
 # Evoluación de Puestos:
@@ -179,7 +196,9 @@ if 'Evolución' in opciones :
                          ) \
                          )
         st.write(':arrow_down: Pincha si quieres ver:')
-        with st.expander('Tabla interactiva con la que poder ordenar por prueba pinchando en la columna correspondiente') :
+        with st.expander('Tabla dinámica con las Marcas Personales ') :
+
+
             st.dataframe(mejores_marcas(slice, anyo, genero).style.format(lambda s: s[-9:-1],na_rep='-').highlight_null(null_color='grey'))
 
 
