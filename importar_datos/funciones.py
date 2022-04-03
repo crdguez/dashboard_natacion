@@ -2,7 +2,15 @@ import datetime
 import pandas as pd
 
 def separar_columna(df, i, st='\n'):
-    return pd.concat([df[list(range(i))],df[i].str.split(st,expand=True), df[list(range(i+1,len(df.columns)))]], axis =1).T.reset_index(drop=True).T[:]
+    return pd.concat([df[list(range(i))],df[i].str.rsplit(st,expand=True), df[list(range(i+1,len(df.columns)))]], axis =1).T.reset_index(drop=True).T[:]
+
+def separar_columna_derecha(df, i, st='\n'):
+    # las filas que no tienen separador se tabulan a la derecha
+    sl=df[i].str.split('\n',expand=True).fillna(value='')
+    idx=(sl[1]=='')
+    sl.loc[idx,1]=sl.loc[idx,0]
+    sl.loc[idx,0]=''
+    return pd.concat([df[list(range(i))],sl, df[list(range(i+1,len(df.columns)))]], axis =1).T.reset_index(drop=True).T[:]
 
 def juntar_columnas(df,i,j) :
 #     df[df.columns[list(range(i,j+1))]].apply(lambda x: ''.join(x.dropna().astype(str)),axis=1)
