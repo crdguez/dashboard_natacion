@@ -56,7 +56,7 @@ def evolucion_puestos(df,num,anyo,genero) :
 
     plt.grid(True, axis='y')
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
-    plt.xticks(rotation=0)
+    plt.xticks(rotation=-90)
 
     return fg
 
