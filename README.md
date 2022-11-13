@@ -4,6 +4,12 @@ Aplicación hecha en streamlit para visualizar estadísticas de natacion: [https
 
 Los ficheros que lee la aplicación se encuentran en mi repositorio privado [https://gitlab.com/crdguez/resultados_natacion](https://gitlab.com/crdguez/resultados_natacion)
 
+## Instrucciones
+
+* Con *importar_datos.ipynb* se importan los datos obtenidos de los *pdfs*:
+    - se utilizan ficheros csv con registros con este formato: **puesto, nadador, año de nacimiento, club, tiempo, puntos_fina**
+* Se crea la base de datos *base_datos.csv* que la aplicación en *stremalit* explota
+
 ### Crear la imagen a partir del Dockefile
 
 Si no tenemos la imagen en local:
@@ -34,3 +40,5 @@ Y en el navegador
 
 Network URL: http://172.17.0.2:8501
 External URL: http://85.60.254.2:8501
+
+
