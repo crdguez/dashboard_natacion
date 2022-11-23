@@ -34,7 +34,7 @@ st.sidebar.header(':star2: :star2: Filtro :star2: :star2:')
 # Filtro Temporada
 lt=list(slice.Temporada.sort_values().unique())
 lt.insert(0,'Todas')
-tm = st.sidebar.selectbox('Temporada:',lt,1)
+tm = st.sidebar.selectbox('Temporada:',lt,2)
 slice = slice if tm == 'Todas' else slice[slice.Temporada == tm]
 
 
