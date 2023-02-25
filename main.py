@@ -15,7 +15,7 @@ df=pd.read_csv('https://raw.githubusercontent.com/crdguez/dashboard_natacion/mai
 
 df.Puesto = df.Puesto.astype('int')
 
-st.title(':shark: :swimmer: Resultados de natación :swimmer: :shark:')
+st.title(':shark: :swimmer: Resultados de :red[natación] :swimmer: :shark:')
 st.write(':arrow_left: Filtra los datos que quieras con en el menú de la izquierda')
 
 
