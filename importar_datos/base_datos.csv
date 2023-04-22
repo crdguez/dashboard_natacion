@@ -2410,3 +2410,82 @@ Puesto,Nombre,Anyo_nac,Club,Tiempo,Pts,Fecha,Prueba,Piscina,M_F,Competicion,Luga
 22,"NACHER PEREZ, Laia",13,C.N. Iz Cuarte,2:24.10,54,2023-03-26,100m Mariposa,25m,F,"Benjamín, jornada 5",E.M. El Olivar,10,2022-2023,1900-01-01 00:02:24.100
 23,"ABAD PELLEJERO, Ines",13,Stadium Casablanca,2:25.75,52,2023-03-26,100m Mariposa,25m,F,"Benjamín, jornada 5",E.M. El Olivar,10,2022-2023,1900-01-01 00:02:25.750
 24,"MARIN CORTES, Nerea",13,Stadium Venecia,2:28.44,49,2023-03-26,100m Mariposa,25m,F,"Benjamín, jornada 5",E.M. El Olivar,10,2022-2023,1900-01-01 00:02:28.440
+1,"ALAEZ PEREZ, Hugo",12,E.M. El Olivar,2:46.75,211,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:02:46.750
+2,"LOPEZ HERNANDEZ, Marcos",12,C.N. Iz Cuarte,2:50.22,198,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:02:50.220
+3,"LEGORBURO HERNANDEZ, Adrian",12,Stadium Venecia,2:52.81,190,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:02:52.810
+4,"BELTRAN VIEJO, Alonso",12,E.M. El Olivar,2:53.41,188,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:02:53.410
+5,"ASIN GARRIDO, Damian",12,E.M. El Olivar,2:54.95,183,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:02:54.950
+6,"ARREGUI COMPES, Alberto",12,H2ogo C.N.,2:59.94,168,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:02:59.940
+7,"TELLO GRACIA, Izan",12,C.N. Helios,3:06.41,151,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:06.410
+8,"MONEDERO OCEJO, Daniel",12,E.M. El Olivar,3:10.44,142,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:10.440
+9,"ELIPE VARGAS, Ruben",12,E.M. El Olivar,3:13.62,135,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:13.620
+10,"MARTINEZ GOMEZ, Anibal",12,E.M. El Olivar,3:19.26,124,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:19.260
+11,"BEAMONTE MARTIN, Lucas",12,P. San Agustin,3:20.44,121,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:20.440
+12,"VAZQUEZ BARCENILLA, Nicolas",12,E.M. El Olivar,3:25.18,113,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:25.180
+13,"ECHEVARRIA JIMENEZ, Nacho",12,E.M. El Olivar,3:30.95,104,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:30.950
+14,"BENITEZ CABEZUDO, Hernan",12,E.M. El Olivar,3:32.30,102,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:32.300
+15,"ENGUITA GARCILOPE, Asier",12,Stadium Venecia,3:35.22,98,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:35.220
+16,"TOMAS ARNAL, Dario",12,E.M. El Olivar,3:49.38,81,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:49.380
+17,"RAMIREZ GIL, Samuel",12,E.M. El Olivar,3:49.81,80,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:49.810
+18,"AGUDELO RAYO, Santiado",12,E.M. El Olivar,3:57.45,73,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:57.450
+19,"TAULES GINER, Mario",12,E.M. El Olivar,3:59.53,71,2023-04-15,200m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,11,2022-2023,1900-01-01 00:03:59.530
+1,"MODREGO MARQUETA, Alejandro",11,Stadium Venecia,5:29.66,266,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:05:29.660
+2,"RODRIGUEZ ARTIEDA, Marcelo",11,C.N. Helios,5:35.09,254,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:05:35.090
+3,"ANTONENKO ANTONENKO, Yehor",11,H2ogo C.N.,5:36.36,251,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:05:36.360
+4,"BELTRAN VIEJO, Arturo",11,E.M. El Olivar,5:41.03,241,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:05:41.030
+5,"ANGUAS FELIZ, Aquiles",11,E.M. El Olivar,5:49.69,223,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:05:49.690
+6,"SERRABLO HUESO, Diego",11,Stadium Venecia,5:50.88,221,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:05:50.880
+7,"LAFUENTE GARCIA, Victor",11,C.N. Helios,6:08.72,190,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:08.720
+8,"NAVARRO PARDOS, Francisco",11,H2ogo C.N.,6:13.66,183,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:13.660
+9,"SANCHO GRAUS, Bruno",11,E.M. El Olivar,6:14.56,181,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:14.560
+10,"FANDOS MARCO, Carlos",11,E.M. El Olivar,6:15.56,180,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:15.560
+11,"MARTINEZ ANTUNEZ, Roman",11,Stadium Venecia,6:21.59,172,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:21.590
+12,"BEAMONTE MARTIN, Diego",11,P. San Agustin,6:29.06,162,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:29.060
+13,"ALCALDE MARTINEZ, Martin",11,C.N. Helios,6:45.56,143,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:06:45.560
+14,"LANUZA DIAZ, Eduardo",11,P. San Agustin,7:36.67,100,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:07:36.670
+15,"JIMENEZ VICO, Pedro",11,C.N. Helios,7:43.44,96,2023-04-15,400m Libre,25m,M,"Benjamín, jornada 6",E.M. El Olivar,12,2022-2023,1900-01-01 00:07:43.440
+1,"LERSUNDI GOMEZ, Mia",14,E.M. El Olivar,3:26.94,204,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:26.940
+2,"FERNANDEZ ELIAS, Jimena",14,E.M. El Olivar,3:40.75,168,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:40.750
+3,"SALUDAS TRICAS, Carlota",14,E.M. El Olivar,3:45.26,158,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:45.260
+4,"BARRACHINA ARTAZCOZ, Ane",14,E.M. El Olivar,3:48.66,151,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:48.660
+5,"MARTINEZ DE SALINAS PEÑA, Candela",14,E.M. El Olivar,3:49.00,150,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:49.000
+6,"DIEZ FERNANDEZ, Almudena",14,H2ogo C.N.,3:51.10,146,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:51.100
+7,"BAGUENA ANTON, Carmen",14,Stadium Venecia,3:52.56,143,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:52.560
+8,"GIMENO MONREAL, Victoria",14,E.M. El Olivar,3:54.25,140,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:54.250
+9,"ADIEGO PARDILLOS, Ursula",14,E.M. El Olivar,3:56.94,136,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:03:56.940
+10,"MAYOR HERNANDEZ, Carla",14,E.M. El Olivar,4:05.54,122,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:05.540
+11,"RUBIO GONZALEZ, Martina",14,P. San Agustin,4:06.16,121,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:06.160
+12,"VELA GARCIA, Julia",14,Stadium Venecia,4:07.74,119,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:07.740
+13,"HERNANDO TRANCHE, Vega",14,Stadium Venecia,4:14.80,109,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:14.800
+14,"CABRERIZO VELA, Carla",14,Stadium Venecia,4:14.97,109,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:14.970
+15,"SANCHEZ ROYO, Sofia",14,E.M. El Olivar,4:15.78,108,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:15.780
+16,"SCHROPFER CALVO, Adriana",14,H2ogo C.N.,4:16.28,107,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:16.280
+17,"POLO BELLIDO, Daniela",14,E.M. El Olivar,4:17.20,106,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:17.200
+18,"SARIÑENA SIMON, Lola",14,Stadium Venecia,4:18.31,104,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:18.310
+19,"BAIGES FERNANDEZ, Anna",14,P. San Agustin,4:27.44,94,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:27.440
+20,"BUENO RODRIGO, Laura",14,H2ogo C.N.,4:35.25,86,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:35.250
+21,"BENITEZ CABEZUDO, Leonor",14,E.M. El Olivar,4:41.00,81,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:41.000
+22,"BUENO RODRIGO, Alicia",14,H2ogo C.N.,4:49.25,74,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:49.250
+23,"LOPEZ HERNANDEZ, Paola",14,C.N. Iz Cuarte,4:57.85,68,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,9,2022-2023,1900-01-01 00:04:57.850
+1,"RODRIGUEZ SOLANAS, Ines",13,E.M. El Olivar,3:12.18,254,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:12.180
+2,"MARTIN SORIA, Claudia",13,Stadium Venecia,3:14.70,245,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:14.700
+3,"PEREZ GARCIA, Leyre",13,C.D. Piratas Teruel,3:24.12,212,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:24.120
+4,"ESCORIHUELA AZNAR, Claudia",13,E.M. El Olivar,3:25.69,207,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:25.690
+5,"LEAL PELEGRIN, Julieta",13,E.M. El Olivar,3:33.88,184,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:33.880
+6,"RODRIGO MONFORTE, Lucia",13,E.M. El Olivar,3:34.94,182,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:34.940
+7,"REMACHA ROYO, Itziar",13,E.M. El Olivar,3:38.47,173,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:38.470
+8,"PEREZ LAHUERTA, Candela",13,C.N. Helios,3:40.31,169,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:40.310
+9,"DEL BARRIO MIGUEL, Vera",13,Stadium Venecia,3:43.81,161,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:43.810
+10,"RODRIGO LORENTE, Claudia",13,Stadium Venecia,3:45.44,157,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:45.440
+11,"ZAPATA FERNANDEZ, Jara",13,Stadium Venecia,3:45.86,157,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:45.860
+12,"GIMENO GOMEZ, Yaretzi Izel",13,P. San Agustin,3:47.47,153,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:47.470
+13,"MARTINEZ MARQUES, Aimar Teresa",13,Stadium Venecia,3:48.82,151,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:48.820
+14,"BORREGUERO PEDREIRA, Leire",13,E.M. El Olivar,3:55.84,137,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:03:55.840
+15,"SEGURA GRACIA, Silvia",13,E.M. El Olivar,4:04.67,123,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:04.670
+16,"NACHER PEREZ, Laia",13,C.N. Iz Cuarte,4:07.41,119,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:07.410
+17,"MARIN CORTES, Nerea",13,Stadium Venecia,4:10.88,114,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:10.880
+18,"ARANDA ARIAS, Marta",13,C.N. Iz Cuarte,4:14.48,109,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:14.480
+19,"GARCIA RODRIGUEZ, Aroa",13,C.N. Helios,4:18.20,105,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:18.200
+20,"GALAY TORRIJO, Celia",13,Stadium Venecia,4:18.28,105,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:18.280
+21,"ALONSO TELLERIA, Marina",13,P. San Agustin,4:22.62,99,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:22.620
+22,"PEREZ BOSQUED, Nuria",13,Stadium Venecia,4:24.59,97,2023-04-15,200m Estilos,25m,F,"Benjamín, jornada 6",E.M. El Olivar,10,2022-2023,1900-01-01 00:04:24.590
